@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Losowanie sumy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .suma {
+            font-size: 32px;
+            margin: 20px 0;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Losowanie i dodawanie</h1>
+
+    <div class="suma">
+        Suma: <span id="suma">0</span>
+    </div>
+
+    <button onclick="losuj()">Losuj liczbę</button>
+
+    <script>
+        let suma = 0;
+
+        function losuj() {
+            const losowaLiczba = Math.floor(Math.random() * 10001);
+            suma += losowaLiczba;
+
+            document.getElementById("suma").textContent = suma;
+
+            console.log("Wylosowana liczba:", losowaLiczba);
+        }
+    </script>
+
+</body>
+</html>
